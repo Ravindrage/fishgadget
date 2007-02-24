@@ -2,7 +2,7 @@
 <Module>
 <ModulePrefs title="Fish" 
 category="funandgames" 
-description="Wouldn't it be great to have some fish that would never need to have their tank cleaned out or that would never die from eating too much?  Add these fish to your page and that is exactly what you'll have.  These fish eat the food you give them by clicking your mouse, follow your mouse if they can see it, or just swim around as they wait for you to come back."
+description="Wouldn't it be great to have some fish that would never need to have their tank cleaned or that would never die from eating too much?  Add these fish to your page and that is exactly what you'll have.  These fish eat the food you give them by clicking your mouse. They will follow your mouse if they can see it, or just swim around as they wait for you to come back."
 author="Adam Bowman"
 author_email="adbocode@gmail.com"
 title_url="http://abowman.com/google-modules/fish/"
@@ -19,8 +19,8 @@ _IG_RegisterOnloadHandler(init__MODULE_ID__);
 function init__MODULE_ID__(){
     var prefs = new _IG_Prefs(__MODULE_ID__);
     
-    var movie = "http://abowman.com/projects/gadgets/fish/fish.swf";
-    var bgcolor = "0066ff";
+    var movie = "http://fishgadget.googlecode.com/svn/trunk/fish.swf";
+    var bgcolor = "F0F7FF";
     var flashContent = _gel("flashContent");
     var flashVars = "";
     
