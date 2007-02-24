@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="Fish" 
+category="funandgames" 
+description="Wouldn't it be great to have some fish that would never need to have their tank cleaned out or that would never die from eating too much?  Add these fish to your page and that is exactly what you'll have.  These fish eat the food you give them by clicking your mouse, follow your mouse if they can see it, or just swim around as they wait for you to come back."
+author="Adam Bowman"
+author_email="adbocode@gmail.com"
+title_url="http://abowman.com/google-modules/fish/"
+screenshot="http://abowman.com/projects/gadgets/fish/fish.png"
+thumbnail="http://abowman.com/projects/gadgets/fish/fishThumb.png"
+author_link="http://abowman.com"
+author_photo="http://abowman.com/abowman.jpg"
+author_location="Hallowell, Maine" />
+  <Content type="html">
+<![CDATA[
+<script type="text/javascript">
+_IG_RegisterOnloadHandler(init__MODULE_ID__); 
+
+function init__MODULE_ID__(){
+    var prefs = new _IG_Prefs(__MODULE_ID__);
+    
+    var movie = "http://abowman.com/projects/gadgets/fish/fish.swf";
+    var bgcolor = "0066ff";
+    var flashContent = _gel("flashContent");
+    var flashVars = "";
+    
+    flashContent.innerHTML = '<object type="application/x-shockwave-flash" data="'+ movie +'" width="100%" height="100%" id="fish">' + 
+		'<param name="movie" value="'+ movie +'"/>' + 
+		'<param name="quality" value="high" />' + 
+		'<param name="bgcolor" value="#'+ bgcolor +'" />' + 
+		'<param name="FlashVars" value="'+ flashVars +'"/>' + 
+		'</object>';
+    
+    function resize(){
+        if (document.body.scrollHeight > document.body.offsetHeight){
+            flashContent.style.height=document.body.scrollHeight;
+        }else{
+            flashContent.style.height=document.body.offsetHeight;
+        }
+    }
+    
+    if(flashContent.clientHeight <= 1){
+        resize();
+        window.onresize = resize;
+    }
+}
+</script>
+<div id="flashContent" style="height:auto;"/>
+  ]]> 
+  </Content>
+</Module>
