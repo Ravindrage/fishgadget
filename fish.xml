@@ -11,6 +11,47 @@ thumbnail="http://abowman.com/projects/gadgets/fish/fishThumb.png"
 author_link="http://abowman.com"
 author_photo="http://abowman.com/abowman.jpg"
 author_location="Hallowell, Maine" />
+
+ <UserPref name="fishName" display_name="Name" default_value="Fish" datatype="string"/>
+ <UserPref name="fishColor" display_name="Fish Color" default_value="F45540" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FEB859" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+ </UserPref>
+ <UserPref name="backgroundColor" display_name="Background Color" default_value="F0F7FF" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FEB859" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+ </UserPref>
+ <UserPref name="backgroundImage" display_name="Background Image (jpg)" default_value="http://" datatype="string"/>
+  <UserPref name="numFish" display_name="Number of Fish" default_value="5" datatype="enum">
+   <EnumValue value="10" display_value="10"/>
+   <EnumValue value="9" display_value="9"/>
+   <EnumValue value="8" display_value="8"/>
+   <EnumValue value="7" display_value="7"/>
+   <EnumValue value="6" display_value="6"/>
+   <EnumValue value="5" display_value="5"/>
+   <EnumValue value="4" display_value="4"/>
+   <EnumValue value="3" display_value="3"/>
+   <EnumValue value="2" display_value="2"/>
+   <EnumValue value="1" display_value="1"/>
+ </UserPref>
+<UserPref name="userColor1" display_name="Custom Color 1" default_value="" datatype="string"/>
+<UserPref name="userColor2" display_name="Custom Color 2" default_value="" datatype="string"/>
   <Content type="html">
 <![CDATA[
 <script type="text/javascript">
@@ -22,13 +63,33 @@ function init__MODULE_ID__(){
     var movie = "http://fishgadget.googlecode.com/svn/trunk/fish.swf";
     var bgcolor = "F0F7FF";
     var flashContent = _gel("flashContent");
+    
+    var numFish = prefs.getString("numFish");
+    var fishColor = prefs.getString("fishColor");
+    var backgroundColor = prefs.getString("backgroundColor");
+    
     var flashVars = "";
+    
+    if(numFish != null){
+        flashVars = "up_numFish=" + numFish + "&";
+    }
+    
+    if(fishColor != null){
+        fishColor = checkCustomColor__MODULE_ID__(fishColor);
+        flashVars += "up_fishColor=" + fishColor + "&";
+    }
+    
+    if(backgroundColor != null){
+        backgroundColor = checkCustomColor__MODULE_ID__(backgroundColor);
+        flashVars += "up_backgroundColor=" + backgroundColor + "&"; 
+        bgcolor = backgroundColor;
+    }
     
     flashContent.innerHTML = '<object type="application/x-shockwave-flash" data="'+ movie +'" width="100%" height="100%" id="fish">' + 
 		'<param name="movie" value="'+ movie +'"/>' + 
 		'<param name="quality" value="high" />' + 
 		'<param name="bgcolor" value="#'+ bgcolor +'" />' + 
-        '<param name="wmode" value="opaque" />' + 
+		'<param name="wmode" value="opaque" />' + 
 		'<param name="FlashVars" value="'+ flashVars +'"/>' + 
 		'</object>';
     
@@ -44,6 +105,14 @@ function init__MODULE_ID__(){
         resize();
         window.onresize = resize;
     }
+}
+
+function checkCustomColor__MODULE_ID__(color){
+        var prefs = new _IG_Prefs(__MODULE_ID__);
+        if(color.substring(0,4)=="user")
+            return prefs.getString(color);
+        else
+            return color;
 }
 </script>
 <div id="flashContent" style="height:auto;"/>
