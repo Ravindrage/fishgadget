@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-<ModulePrefs title="Fish" 
+<ModulePrefs title="__UP_fishName__" 
+directory_title="Fish"
 category="funandgames" 
 description="Wouldn't it be great to have some fish that would never need to have their tank cleaned or that would never die from eating too much?  Add these fish to your page and that is exactly what you'll have.  These fish eat the food you give them by clicking your mouse. They will follow your mouse if they can see it, or just swim around as they wait for you to come back."
 author="Adam Bowman"
