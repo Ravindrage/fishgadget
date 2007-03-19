@@ -68,6 +68,7 @@ function init__MODULE_ID__(){
     var numFish = prefs.getString("numFish");
     var fishColor = prefs.getString("fishColor");
     var backgroundColor = prefs.getString("backgroundColor");
+    var backgroundImage = prefs.getString("backgroundImage");
     
     var flashVars = "";
     
@@ -84,6 +85,10 @@ function init__MODULE_ID__(){
         backgroundColor = checkCustomColor__MODULE_ID__(backgroundColor);
         flashVars += "up_backgroundColor=" + backgroundColor + "&"; 
         bgcolor = backgroundColor;
+    }
+    
+    if(backgroundImage != null  && backgroundImage != "http://"){
+        flashVars = "up_backgroundImage=" + backgroundImage + "&";
     }
     
     flashContent.innerHTML = '<object type="application/x-shockwave-flash" data="'+ movie +'" width="100%" height="100%" id="fish">' + 
