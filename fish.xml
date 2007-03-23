@@ -98,24 +98,10 @@ function init__MODULE_ID__(){
 		'<param name="wmode" value="opaque" />' + 
 		'<param name="FlashVars" value="'+ flashVars +'"/>' + 
 		'</object>';
-    /*
-    function resize(){
-        if (document.body.scrollHeight > document.body.offsetHeight){
-            flashContent.style.height=document.body.scrollHeight;
-        }else{
-            flashContent.style.height=document.body.offsetHeight;
-        }
-    }
-    
-    if(flashContent.clientHeight <= 1){
-        resize();
-        window.onresize = resize;
-    }
-    */
 }
 
 window.onresize = function(){
-    flashContent.style.height=document.body.offsetHeight;
+    _gel("flashContent").style.height=document.body.offsetHeight;
 }
 
 function checkCustomColor__MODULE_ID__(color){
