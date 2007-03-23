@@ -100,9 +100,14 @@ function init__MODULE_ID__(){
 		'</object>';
 }
 
-window.onresize = function(){
+
+function resize(){
     _gel("flashContent").style.height=document.body.offsetHeight;
 }
+
+window.onresize = resize;
+
+resize();
 
 function checkCustomColor__MODULE_ID__(color){
         var prefs = new _IG_Prefs(__MODULE_ID__);
