@@ -100,11 +100,11 @@ function init__MODULE_ID__(){
 		'</object>';
     
     function resize(){
-        //if (document.body.scrollHeight > document.body.offsetHeight){
-        //    flashContent.style.height=document.body.scrollHeight;
-        //}else{
+        if (document.body.scrollHeight > document.body.offsetHeight){
+            flashContent.style.height=document.body.scrollHeight;
+        }else{
             flashContent.style.height=document.body.offsetHeight;
-        //}
+        }
     }
     
     if(flashContent.clientHeight <= 1){
