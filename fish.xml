@@ -55,6 +55,8 @@ author_location="Hallowell, Maine" />
 <UserPref name="userColor2" display_name="Custom Color 2" default_value="" datatype="string"/>
   <Content type="html">
 <![CDATA[
+<div id="flashContent" style="height:auto;"/>
+
 <script type="text/javascript">
 _IG_RegisterOnloadHandler(init__MODULE_ID__); 
 
@@ -91,6 +93,8 @@ function init__MODULE_ID__(){
         flashVars += "up_backgroundImage=" + backgroundImage + "&";
     }
     
+    flashContent.style.height = document.body.clientHeight +"px";
+    
     flashContent.innerHTML = '<object type="application/x-shockwave-flash" data="'+ movie +'" width="100%" height="100%" id="fish">' + 
 		'<param name="movie" value="'+ movie +'"/>' + 
 		'<param name="quality" value="high" />' + 
@@ -98,12 +102,10 @@ function init__MODULE_ID__(){
 		'<param name="wmode" value="opaque" />' + 
 		'<param name="FlashVars" value="'+ flashVars +'"/>' + 
 		'</object>';
-        
-    flashContent.style.height=document.body.offsetHeight;
 }
 
 window.onresize = function(){
-    _gel("flashContent").style.height=document.body.offsetHeight;
+    _gel("flashContent").style.height=document.body.clientHeight+"px";
 }
 
 function checkCustomColor__MODULE_ID__(color){
@@ -114,7 +116,7 @@ function checkCustomColor__MODULE_ID__(color){
             return color;
 }
 </script>
-<div id="flashContent" style="height:auto;"/>
+
   ]]> 
   </Content>
 </Module>
