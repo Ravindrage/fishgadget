@@ -101,6 +101,7 @@ function init__MODULE_ID__(){
 		'<param name="bgcolor" value="#'+ bgcolor +'" />' + 
 		'<param name="wmode" value="opaque" />' + 
 		'<param name="FlashVars" value="'+ flashVars +'"/>' + 
+        'You must first install the <a href="http://www.adobe.com/products/flashplayer/" target="_blank">free flash player plugin</a> in order to view this content.'+
 		'</object>';
 }
 
