@@ -276,39 +276,35 @@ function init__MODULE_ID__(){
         flashVars += "up_backgroundImage=" + backgroundImage + "&";
     }
     
-    
     function getViewportSize(){
-        //thanks to http://andylangton.co.uk/articles/javascript/get-viewport-size-javascript/
+        	//thanks to http://andylangton.co.uk/articles/javascript/get-viewport-size-javascript/
          var viewportWidth;
          var viewportHeight;
-         // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
-         if (typeof window.innerWidth != 'undefined')
-         {
-              viewportWidth = window.innerWidth,
-              viewportHeight = window.innerHeight
+	 
+         if(typeof(window.innerWidth) != 'undefined'){
+	 	// the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+              viewportWidth = window.innerWidth;
+              viewportHeight = window.innerHeight;
+         }else if(typeof(document.documentElement) != 'undefined'
+             	&& typeof(document.documentElement.clientWidth) != 'undefined' 
+		&& document.documentElement.clientWidth != 0){
+	 	// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+               viewportWidth = document.documentElement.clientWidth;
+               viewportHeight = document.documentElement.clientHeight;
+         }else{
+	 	// older versions of IE
+               viewportWidth = document.getElementsByTagName('body')[0].clientWidth;
+               viewportHeight = document.getElementsByTagName('body')[0].clientHeight;
          }
-         // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
-         else if (typeof document.documentElement != 'undefined'
-             && typeof document.documentElement.clientWidth !=
-             'undefined' && document.documentElement.clientWidth != 0)
-         {
-               viewportWidth = document.documentElement.clientWidth,
-               viewportHeight = document.documentElement.clientHeight
-         }
-         // older versions of IE
-         else
-         {
-               viewportWidth = document.getElementsByTagName('body')[0].clientWidth,
-               viewportHeight = document.getElementsByTagName('body')[0].clientHeight
-         }
+	 
          return {w:viewportWidth,h:viewportHeight};
     }
-
+    
     function resize(){
         var viewportSize = getViewportSize();
         flashContent.style.height = viewportSize.h +"px";
     }
-        
+    
     resize();
     window.onresize = resize;
     
