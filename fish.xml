@@ -60,6 +60,9 @@ author_location="Hallowell, Maine"
    <EnumValue value="FFE114" display_value="Yellow"/>
    <EnumValue value="userColor1" display_value="Custom Color 1"/>
    <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
  </UserPref>
  <UserPref name="fishColor2" display_name="Fish 2 Color" default_value="F45540" datatype="enum">
    <EnumValue value="000000" display_value="Black"/>
@@ -74,6 +77,9 @@ author_location="Hallowell, Maine"
    <EnumValue value="FFE114" display_value="Yellow"/>
    <EnumValue value="userColor1" display_value="Custom Color 1"/>
    <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
  </UserPref>
  <UserPref name="fishColor3" display_name="Fish 3 Color" default_value="F45540" datatype="enum">
    <EnumValue value="000000" display_value="Black"/>
@@ -88,6 +94,9 @@ author_location="Hallowell, Maine"
    <EnumValue value="FFE114" display_value="Yellow"/>
    <EnumValue value="userColor1" display_value="Custom Color 1"/>
    <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
  </UserPref>
  <UserPref name="fishColor4" display_name="Fish 4 Color" default_value="F45540" datatype="enum">
    <EnumValue value="000000" display_value="Black"/>
@@ -102,6 +111,9 @@ author_location="Hallowell, Maine"
    <EnumValue value="FFE114" display_value="Yellow"/>
    <EnumValue value="userColor1" display_value="Custom Color 1"/>
    <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
  </UserPref>
  <UserPref name="fishColor5" display_name="Fish 5 Color" default_value="F45540" datatype="enum">
    <EnumValue value="000000" display_value="Black"/>
@@ -116,6 +128,9 @@ author_location="Hallowell, Maine"
    <EnumValue value="FFE114" display_value="Yellow"/>
    <EnumValue value="userColor1" display_value="Custom Color 1"/>
    <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
  </UserPref>
  <UserPref name="fishColor6" display_name="Fish 6 Color" default_value="F45540" datatype="enum">
    <EnumValue value="000000" display_value="Black"/>
@@ -130,6 +145,9 @@ author_location="Hallowell, Maine"
    <EnumValue value="FFE114" display_value="Yellow"/>
    <EnumValue value="userColor1" display_value="Custom Color 1"/>
    <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
  </UserPref>
  <UserPref name="fishColor7" display_name="Fish 7 Color" default_value="F45540" datatype="enum">
    <EnumValue value="000000" display_value="Black"/>
@@ -144,6 +162,9 @@ author_location="Hallowell, Maine"
    <EnumValue value="FFE114" display_value="Yellow"/>
    <EnumValue value="userColor1" display_value="Custom Color 1"/>
    <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
  </UserPref>
  <UserPref name="fishColor8" display_name="Fish 8 Color" default_value="F45540" datatype="enum">
    <EnumValue value="000000" display_value="Black"/>
@@ -158,6 +179,9 @@ author_location="Hallowell, Maine"
    <EnumValue value="FFE114" display_value="Yellow"/>
    <EnumValue value="userColor1" display_value="Custom Color 1"/>
    <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
  </UserPref>
  <UserPref name="fishColor9" display_name="Fish 9 Color" default_value="F45540" datatype="enum">
    <EnumValue value="000000" display_value="Black"/>
@@ -172,6 +196,9 @@ author_location="Hallowell, Maine"
    <EnumValue value="FFE114" display_value="Yellow"/>
    <EnumValue value="userColor1" display_value="Custom Color 1"/>
    <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
  </UserPref>
  <UserPref name="fishColor10" display_name="Fish 10 Color" default_value="F45540" datatype="enum">
    <EnumValue value="000000" display_value="Black"/>
@@ -186,9 +213,15 @@ author_location="Hallowell, Maine"
    <EnumValue value="FFE114" display_value="Yellow"/>
    <EnumValue value="userColor1" display_value="Custom Color 1"/>
    <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
  </UserPref>
 <UserPref name="userColor1" display_name="Custom Color 1" default_value="" datatype="string"/>
 <UserPref name="userColor2" display_name="Custom Color 2" default_value="" datatype="string"/>
+<UserPref name="userColor3" display_name="Custom Color 3" default_value="" datatype="string"/>
+<UserPref name="userColor4" display_name="Custom Color 4" default_value="" datatype="string"/>
+<UserPref name="userColor5" display_name="Custom Color 5" default_value="" datatype="string"/>
   <Content type="html">
 <![CDATA[
 <div id="flashContent" style="height:auto;"/>
@@ -243,7 +276,41 @@ function init__MODULE_ID__(){
         flashVars += "up_backgroundImage=" + backgroundImage + "&";
     }
     
-    flashContent.style.height = document.body.clientHeight +"px";
+    
+    function getViewportSize(){
+        //thanks to http://andylangton.co.uk/articles/javascript/get-viewport-size-javascript/
+         var viewportWidth;
+         var viewportHeight;
+         // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+         if (typeof window.innerWidth != 'undefined')
+         {
+              viewportWidth = window.innerWidth,
+              viewportHeight = window.innerHeight
+         }
+         // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+         else if (typeof document.documentElement != 'undefined'
+             && typeof document.documentElement.clientWidth !=
+             'undefined' && document.documentElement.clientWidth != 0)
+         {
+               viewportWidth = document.documentElement.clientWidth,
+               viewportHeight = document.documentElement.clientHeight
+         }
+         // older versions of IE
+         else
+         {
+               viewportWidth = document.getElementsByTagName('body')[0].clientWidth,
+               viewportHeight = document.getElementsByTagName('body')[0].clientHeight
+         }
+         return {w:viewportWidth,h:viewportHeight};
+    }
+
+    function resize(){
+        var viewportSize = getViewportSize();
+        flashContent.style.height = viewportSize.h +"px";
+    }
+        
+    resize();
+    window.onresize = resize;
     
     flashContent.innerHTML = '<object type="application/x-shockwave-flash" data="'+ movie +'" width="100%" height="100%" id="fish">' + 
 		'<param name="movie" value="'+ movie +'"/>' + 
@@ -253,10 +320,6 @@ function init__MODULE_ID__(){
 		'<param name="FlashVars" value="'+ flashVars +'"/>' + 
         'You must first install the <a href="http://www.adobe.com/products/flashplayer/" target="_blank">free flash player plugin</a> in order to view this content.'+
 		'</object>';
-}
-
-window.onresize = function(){
-    _gel("flashContent").style.height=document.body.clientHeight+"px";
 }
 
 function checkCustomColor__MODULE_ID__(color){
