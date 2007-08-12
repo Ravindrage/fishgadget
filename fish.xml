@@ -237,7 +237,7 @@ _IG_RegisterOnloadHandler(init__MODULE_ID__);
 function init__MODULE_ID__(){
     var prefs = new _IG_Prefs(__MODULE_ID__);
     
-    var movie = "http://fishgadget.googlecode.com/svn/trunk/fishV2.swf";
+    var movie = "http://fishgadget.googlecode.com/svn/trunk/fish.swf?2";
     var bgcolor = "F0F7FF";
     var flashContent = _gel("flashContent");
     
@@ -271,14 +271,6 @@ function init__MODULE_ID__(){
          return {w:viewportWidth,h:viewportHeight};
     }
     
-    function resize(){
-        var viewportSize = getViewportSize();
-        flashContent.style.height = viewportSize.h +"px";
-    }
-    
-    resize();
-    window.onresize = resize;
-    
     if(backgroundColor != null){
         backgroundColor = checkCustomColor__MODULE_ID__(backgroundColor);
         bgcolor = backgroundColor;
@@ -286,6 +278,16 @@ function init__MODULE_ID__(){
     
     var so = new SWFObject(movie, "fish", "100%", "100%", "9", "#"+ bgcolor);
     so.addParam("wmode","opaque");
+    
+    function resize(){
+        var viewportSize = getViewportSize();
+        flashContent.style.height = viewportSize.h +"px";
+	so.addVariable("up_height", viewportSize.h);
+	so.addVariable("up_width", viewportSize.w);
+    }
+    
+    resize();
+    window.onresize = resize;
     
     for(var i=1;i <= 10;i++){
 	fishColor = prefs.getString("fishColor"+i);
