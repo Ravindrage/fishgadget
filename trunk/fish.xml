@@ -220,6 +220,23 @@ author_location="Hallowell, Maine"
    <EnumValue value="userColor4" display_value="Custom Color 4"/>
    <EnumValue value="userColor5" display_value="Custom Color 5"/>
  </UserPref>
+ <UserPref name="foodColor" display_name="Food Color" default_value="FCB347" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
+   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FCB347" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ </UserPref>
 <UserPref name="userColor1" display_name="Custom Color 1" default_value="" datatype="string"/>
 <UserPref name="userColor2" display_name="Custom Color 2" default_value="" datatype="string"/>
 <UserPref name="userColor3" display_name="Custom Color 3" default_value="" datatype="string"/>
@@ -237,7 +254,7 @@ _IG_RegisterOnloadHandler(init__MODULE_ID__);
 function init__MODULE_ID__(){
     var prefs = new _IG_Prefs(__MODULE_ID__);
     
-    var movie = "http://fishgadget.googlecode.com/svn/trunk/fish.swf?2";
+    var movie = "http://fishgadget.googlecode.com/svn/trunk/fish.swf?3";
     var bgcolor = "F0F7FF";
     var flashContent = _gel("flashContent");
     
@@ -246,6 +263,7 @@ function init__MODULE_ID__(){
     var fishColors = new Array();
     var backgroundColor = prefs.getString("backgroundColor");
     var backgroundImage = prefs.getString("backgroundImage");
+    var foodColor = prefs.getString("foodColor");
     
     function getViewportSize(){
         	//thanks to http://andylangton.co.uk/articles/javascript/get-viewport-size-javascript/
@@ -297,6 +315,11 @@ function init__MODULE_ID__(){
     
     if(numFish != null){
         so.addVariable("up_numFish", numFish);
+    }
+    
+    if(foodColor != null){
+    	foodColor = checkCustomColor__MODULE_ID__(foodColor);
+        so.addVariable("up_foodColor", foodColor);
     }
     
     if(backgroundColor != null){
