@@ -264,6 +264,7 @@ function init__MODULE_ID__(){
     var backgroundColor = prefs.getString("backgroundColor");
     var backgroundImage = prefs.getString("backgroundImage");
     var foodColor = prefs.getString("foodColor");
+    var viewportSize = getViewportSize();
     
     function getViewportSize(){
         	//thanks to http://andylangton.co.uk/articles/javascript/get-viewport-size-javascript/
@@ -300,8 +301,6 @@ function init__MODULE_ID__(){
     function resize(){
         var viewportSize = getViewportSize();
         flashContent.style.height = viewportSize.h +"px";
-	so.addVariable("up_height", viewportSize.h);
-	so.addVariable("up_width", viewportSize.w);
     }
     
     resize();
@@ -329,6 +328,9 @@ function init__MODULE_ID__(){
     if(backgroundImage != null  && backgroundImage != "http://"){
         so.addVariable("up_backgroundImage", backgroundImage);
     }
+    
+    so.addVariable("up_height", viewportSize.h);
+    so.addVariable("up_width", viewportSize.w);
     
     so.write("flashContent");
 }
