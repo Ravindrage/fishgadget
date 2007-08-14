@@ -295,7 +295,7 @@ function init__MODULE_ID__(){
         bgcolor = backgroundColor;
     }
     
-    var so = new SWFObject(movie, "fish", "100%", "100%", "9", "#"+ bgcolor);
+    var so = new SWFObject(movie, "fish", "100%", "100%", "6", "#"+ bgcolor);
     so.addParam("wmode","opaque");
     
     function resize(){
