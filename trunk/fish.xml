@@ -254,7 +254,7 @@ _IG_RegisterOnloadHandler(init__MODULE_ID__);
 function init__MODULE_ID__(){
     var prefs = new _IG_Prefs(__MODULE_ID__);
     
-    var movie = "http://fishgadget.googlecode.com/svn/trunk/fish.swf?3";
+    var movie = _IG_GetCachedUrl("http://fishgadget.googlecode.com/svn/trunk/fish.swf");
     var bgcolor = "F0F7FF";
     var flashContent = _gel("flashContent");
     
