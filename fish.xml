@@ -252,9 +252,9 @@ author_location="Hallowell, Maine"
 You must first install the <a href="http://www.adobe.com/products/flashplayer/" target="_blank">free flash player plugin</a> in order to view this content.
 </div>
 <script type="text/javascript">
-_IG_RegisterOnloadHandler(init__MODULE_ID__); 
+_IG_RegisterOnloadHandler(init); 
 
-function init__MODULE_ID__(){
+function init(){
     var prefs = new _IG_Prefs(__MODULE_ID__);
     
     var movie = _IG_GetCachedUrl("http://fishgadget.googlecode.com/svn/trunk/fish.swf");
@@ -273,7 +273,47 @@ function init__MODULE_ID__(){
         _IG_GetCachedUrl(backgroundImage);
     }
     
-    function getViewportSize(){
+    if(backgroundColor != null){
+        backgroundColor = checkCustomColor(backgroundColor);
+        bgcolor = backgroundColor;
+    }
+
+    var so = new SWFObject(movie, "fish", "100%", "100%", "6", "#"+ bgcolor);
+    so.addParam("wmode","opaque");
+    
+    resize();
+    window.onresize = resize;
+    
+    for(var i=1;i <= 10;i++){
+	    fishColor = prefs.getString("fishColor"+i);
+	    fishColor = checkCustomColor(fishColor);
+	    so.addVariable("up_fishColor"+ i , fishColor);
+    }
+    
+    if(numFish != null){
+        so.addVariable("up_numFish", numFish);
+    }
+    
+    if(foodColor != null){
+    	foodColor = checkCustomColor(foodColor);
+        so.addVariable("up_foodColor", foodColor);
+    }
+    
+    if(backgroundColor != null){
+        so.addVariable("up_backgroundColor", backgroundColor);
+    }
+    
+    if(backgroundImage != null  && backgroundImage != "http://"){
+        so.addVariable("up_backgroundImage", backgroundImage);
+    }
+    
+    so.addVariable("up_height", viewportSize.h);
+    so.addVariable("up_width", viewportSize.w);
+    
+    so.write("flashContent");
+}
+
+function getViewportSize(){
         	//thanks to http://andylangton.co.uk/articles/javascript/get-viewport-size-javascript/
          var viewportWidth;
          var viewportHeight;
@@ -295,54 +335,14 @@ function init__MODULE_ID__(){
          }
 	 
          return {w:viewportWidth,h:viewportHeight};
-    }
-    
-    if(backgroundColor != null){
-        backgroundColor = checkCustomColor__MODULE_ID__(backgroundColor);
-        bgcolor = backgroundColor;
-    }
-    
-    var so = new SWFObject(movie, "fish", "100%", "100%", "6", "#"+ bgcolor);
-    so.addParam("wmode","opaque");
-    
-    function resize(){
-        var viewportSize = getViewportSize();
-        flashContent.style.height = viewportSize.h +"px";
-    }
-    
-    resize();
-    window.onresize = resize;
-    
-    for(var i=1;i <= 10;i++){
-	fishColor = prefs.getString("fishColor"+i);
-	fishColor = checkCustomColor__MODULE_ID__(fishColor);
-	so.addVariable("up_fishColor"+ i , fishColor);
-    }
-    
-    if(numFish != null){
-        so.addVariable("up_numFish", numFish);
-    }
-    
-    if(foodColor != null){
-    	foodColor = checkCustomColor__MODULE_ID__(foodColor);
-        so.addVariable("up_foodColor", foodColor);
-    }
-    
-    if(backgroundColor != null){
-        so.addVariable("up_backgroundColor", backgroundColor);
-    }
-    
-    if(backgroundImage != null  && backgroundImage != "http://"){
-        so.addVariable("up_backgroundImage", backgroundImage);
-    }
-    
-    so.addVariable("up_height", viewportSize.h);
-    so.addVariable("up_width", viewportSize.w);
-    
-    so.write("flashContent");
 }
 
-function checkCustomColor__MODULE_ID__(color){
+function resize(){
+        var viewportSize = getViewportSize();
+        flashContent.style.height = viewportSize.h +"px";
+}
+    
+function checkCustomColor(color){
         var prefs = new _IG_Prefs(__MODULE_ID__);
         if(color.substring(0,4)=="user")
             return prefs.getString(color);
