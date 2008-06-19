@@ -242,7 +242,7 @@ author_location="Hallowell, Maine"
 <UserPref name="userColor3" display_name="Custom Color 3" default_value="" datatype="string"/>
 <UserPref name="userColor4" display_name="Custom Color 4" default_value="" datatype="string"/>
 <UserPref name="userColor5" display_name="Custom Color 5" default_value="" datatype="string"/>
-  <Content type="html">
+  <Content type="html" view="home,canvas">
 <![CDATA[
 <script>
   document.write('<scr' + 'ipt src="' + _IG_GetCachedUrl('http://fishgadget.googlecode.com/svn/trunk/swfobject.js') + '"></scr' + 'ipt>');
@@ -254,7 +254,7 @@ author_location="Hallowell, Maine"
 _IG_RegisterOnloadHandler(init); 
 
 function init(){
-    var prefs = new _IG_Prefs(__MODULE_ID__);
+    var prefs = new _IG_Prefs();
     
     var movie = _IG_GetCachedUrl("http://fishgadget.googlecode.com/svn/trunk/fish.swf");
     var bgcolor = "F0F7FF";
@@ -342,7 +342,7 @@ function resize(){
 }
     
 function checkCustomColor(color){
-        var prefs = new _IG_Prefs(__MODULE_ID__);
+        var prefs = new _IG_Prefs();
         if(color.substring(0,4)=="user")
             return prefs.getString(color);
         else
