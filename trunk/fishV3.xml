@@ -341,9 +341,9 @@ function resize(){
         var viewportSize = getViewportSize();
         
         if(prefs.getString("synd")=="ig"){
-            if(viewportSize.h > 400){
+            /*if(viewportSize.h > 400){
                 viewportSize.h = 400;
-            }
+            }*/
         }
         
         flashContent.style.height = viewportSize.h +"px";
