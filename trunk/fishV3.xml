@@ -342,8 +342,8 @@ function resize(){
         var viewportSize = getViewportSize();
         
         if(prefs.getString("synd")=="ig"){
-            if(viewportSize.h > 340){
-                viewportSize.h = 340;
+            if(viewportSize.h > 350){
+                viewportSize.h = 350;
             }
         }
         
