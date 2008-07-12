@@ -340,10 +340,11 @@ function getViewportSize(){
 
 function resize(){
         var viewportSize = getViewportSize();
+        var maxHeight = 400;
         
         if(prefs.getString("synd")=="ig"){
-            if(viewportSize.h > 350){
-                viewportSize.h = 350;
+            if(viewportSize.h > maxHeight){
+                viewportSize.h = maxHeight;
             }
         }
         
