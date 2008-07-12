@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="__UP_fishName__" 
+directory_title="Fish"
+category="funandgames" 
+description="Add a touch of nature to your page with these hungry little fish.  Watch how they eagerly swim toward your mouse hoping that you’ll drop a few flakes of food.  Click the down arrow and then Edit Settings to change the number of fish, the color of each fish, and the color of the water. You can also add an image to the background."
+author="Adam Bowman"
+author_email="adbocode@gmail.com"
+title_url="http://abowman.com/google-modules/fish/"
+screenshot="http://abowman.com/projects/gadgets/fish/fish.png"
+thumbnail="http://abowman.com/projects/gadgets/fish/fishThumb.png"
+author_link="http://abowman.com"
+author_photo="http://abowman.com/abowman.jpg"
+author_location="Hallowell, Maine" 
+>
+<Require feature="setprefs" />
+</ModulePrefs>
+<UserPref 
+    name="fishColor" 
+    default_value="none"
+    datatype="hidden"/>
+ <UserPref name="fishName" display_name="Name" default_value="Fish" datatype="string"/>
+ <UserPref name="backgroundColor" display_name="Background Color" default_value="F0F7FF" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
+   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FEB859" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ </UserPref>
+ <UserPref name="backgroundImage" display_name="Background Image (jpg)" default_value="http://" datatype="string"/>
+  <UserPref name="numFish" display_name="Number of Fish" default_value="5" datatype="enum">
+   <EnumValue value="10" display_value="10"/>
+   <EnumValue value="9" display_value="9"/>
+   <EnumValue value="8" display_value="8"/>
+   <EnumValue value="7" display_value="7"/>
+   <EnumValue value="6" display_value="6"/>
+   <EnumValue value="5" display_value="5"/>
+   <EnumValue value="4" display_value="4"/>
+   <EnumValue value="3" display_value="3"/>
+   <EnumValue value="2" display_value="2"/>
+   <EnumValue value="1" display_value="1"/>
+ </UserPref>
+ <UserPref name="fishColor1" display_name="Fish 1 Color" default_value="F45540" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
+   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FEB859" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ </UserPref>
+ <UserPref name="fishColor2" display_name="Fish 2 Color" default_value="F45540" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
+   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FEB859" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ </UserPref>
+ <UserPref name="fishColor3" display_name="Fish 3 Color" default_value="F45540" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+    <EnumValue value="97B6A6" display_value="Tea House Blue"/>
+   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FEB859" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ </UserPref>
+ <UserPref name="fishColor4" display_name="Fish 4 Color" default_value="F45540" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
+   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FEB859" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ </UserPref>
+ <UserPref name="fishColor5" display_name="Fish 5 Color" default_value="F45540" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
+   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FEB859" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ </UserPref>
+ <UserPref name="fishColor6" display_name="Fish 6 Color" default_value="F45540" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
+   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FEB859" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ </UserPref>
+ <UserPref name="fishColor7" display_name="Fish 7 Color" default_value="F45540" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
+   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FEB859" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ </UserPref>
+ <UserPref name="fishColor8" display_name="Fish 8 Color" default_value="F45540" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
+   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FEB859" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ </UserPref>
+ <UserPref name="fishColor9" display_name="Fish 9 Color" default_value="F45540" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
+   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FEB859" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ </UserPref>
+ <UserPref name="fishColor10" display_name="Fish 10 Color" default_value="F45540" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
+   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FEB859" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ </UserPref>
+ <UserPref name="foodColor" display_name="Food Color" default_value="FCB347" datatype="enum">
+   <EnumValue value="000000" display_value="Black"/>
+   <EnumValue value="0E30B7" display_value="Blue"/>
+   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
+   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
+   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
+   <EnumValue value="33CC33" display_value="Green"/>
+   <EnumValue value="FCB347" display_value="Orange"/>
+   <EnumValue value="F45540" display_value="Red"/>
+   <EnumValue value="FFFFFF" display_value="White"/>
+   <EnumValue value="FFE114" display_value="Yellow"/>
+   <EnumValue value="userColor1" display_value="Custom Color 1"/>
+   <EnumValue value="userColor2" display_value="Custom Color 2"/>
+   <EnumValue value="userColor3" display_value="Custom Color 3"/>
+   <EnumValue value="userColor4" display_value="Custom Color 4"/>
+   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ </UserPref>
+<UserPref name="userColor1" display_name="Custom Color 1" default_value="" datatype="string"/>
+<UserPref name="userColor2" display_name="Custom Color 2" default_value="" datatype="string"/>
+<UserPref name="userColor3" display_name="Custom Color 3" default_value="" datatype="string"/>
+<UserPref name="userColor4" display_name="Custom Color 4" default_value="" datatype="string"/>
+<UserPref name="userColor5" display_name="Custom Color 5" default_value="" datatype="string"/>
+  <Content type="html" view="home,canvas">
+<![CDATA[
+<script>
+  document.write('<scr' + 'ipt src="' + _IG_GetCachedUrl('http://fishgadget.googlecode.com/svn/trunk/swfobject.js') + '"></scr' + 'ipt>');
+</script>
+
+<div id="flashContent">
+</div>
+<script type="text/javascript">
+
+function init(){
+    var prefs = new _IG_Prefs();
+    
+    var movie = _IG_GetCachedUrl("http://fishgadget.googlecode.com/svn/trunk/fish.swf");
+    var bgcolor = "F0F7FF";
+    var flashContent = _gel("flashContent");
+    
+    var numFish = prefs.getString("numFish");
+    
+    var fishColors = new Array();
+    var backgroundColor = prefs.getString("backgroundColor");
+    var backgroundImage = prefs.getString("backgroundImage");
+    var foodColor = prefs.getString("foodColor");
+    var viewportSize = getViewportSize();
+    
+    if(backgroundImage != ""){
+        _IG_GetCachedUrl(backgroundImage);
+    }
+    
+    if(backgroundColor != null){
+        backgroundColor = checkCustomColor(backgroundColor);
+        bgcolor = backgroundColor;
+    }
+
+    var so = new SWFObject(movie, "fish", "100%", "100%", "6", "#"+ bgcolor);
+    so.addParam("wmode","opaque");
+    
+    resize();
+    window.onresize = resize;
+    
+    for(var i=1;i <= 10;i++){
+	    fishColor = prefs.getString("fishColor"+i);
+	    fishColor = checkCustomColor(fishColor);
+	    so.addVariable("up_fishColor"+ i , fishColor);
+    }
+    
+    if(numFish != null){
+        so.addVariable("up_numFish", numFish);
+    }
+    
+    if(foodColor != null){
+    	foodColor = checkCustomColor(foodColor);
+        so.addVariable("up_foodColor", foodColor);
+    }
+    
+    if(backgroundColor != null){
+        so.addVariable("up_backgroundColor", backgroundColor);
+    }
+    
+    if(backgroundImage != null  && backgroundImage != "http://"){
+        so.addVariable("up_backgroundImage", backgroundImage);
+    }
+    
+    so.addVariable("up_height", viewportSize.h);
+    so.addVariable("up_width", viewportSize.w);
+    
+    so.write("flashContent");
+}
+
+function getViewportSize(){
+        	//thanks to http://andylangton.co.uk/articles/javascript/get-viewport-size-javascript/
+         var viewportWidth;
+         var viewportHeight;
+	 
+         if(typeof(window.innerWidth) != 'undefined'){
+	 	// the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+              viewportWidth = window.innerWidth;
+              viewportHeight = window.innerHeight;
+         }else if(typeof(document.documentElement) != 'undefined'
+             	&& typeof(document.documentElement.clientWidth) != 'undefined' 
+		&& document.documentElement.clientWidth != 0){
+	 	// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+               viewportWidth = document.documentElement.clientWidth;
+               viewportHeight = document.documentElement.clientHeight;
+         }else{
+	 	// older versions of IE
+               viewportWidth = document.getElementsByTagName('body')[0].clientWidth;
+               viewportHeight = document.getElementsByTagName('body')[0].clientHeight;
+         }
+	 
+         return {w:viewportWidth,h:viewportHeight};
+}
+
+function resize(){
+        var prefs = new _IG_Prefs();
+        
+        var viewportSize = getViewportSize();
+        
+        if(prefs.getString("synd")=="ig"){
+            if(viewportSize.h > 400){
+                viewportSize.h = 400;
+            }
+        }
+        
+        flashContent.style.height = viewportSize.h +"px";
+}
+    
+function checkCustomColor(color){
+        var prefs = new _IG_Prefs();
+        if(color.substring(0,4)=="user")
+            return prefs.getString(color);
+        else
+            return color;
+}
+</script>
+
+  ]]> 
+  </Content>
+</Module>
