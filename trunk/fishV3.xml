@@ -252,8 +252,10 @@ author_location="Hallowell, Maine"
 </div>
 <script type="text/javascript">
 
+var prefs;
+
 function init(){
-    var prefs = new _IG_Prefs();
+    prefs = new _IG_Prefs();
     
     var movie = _IG_GetCachedUrl("http://fishgadget.googlecode.com/svn/trunk/fish.swf");
     var bgcolor = "F0F7FF";
@@ -336,7 +338,7 @@ function getViewportSize(){
 }
 
 function resize(){
-        var prefs = new _IG_Prefs();
+        //var prefs = new _IG_Prefs();
         
         var viewportSize = getViewportSize();
         
@@ -350,7 +352,7 @@ function resize(){
 }
     
 function checkCustomColor(color){
-        var prefs = new _IG_Prefs();
+        //var prefs = new _IG_Prefs();
         if(color.substring(0,4)=="user")
             return prefs.getString(color);
         else
