@@ -256,7 +256,7 @@ var prefs
 function init(){
     prefs = new _IG_Prefs();
     
-    var swfURL = _IG_GetCachedUrl("http://fishgadget.googlecode.com/svn/trunk/fish.swf");
+    var swfURL = _IG_GetCachedUrl("http://fishgadget.googlecode.com/svn/trunk/fish.swf?1");
     var bgcolor = "F0F7FF";
     var flashContent = _gel("flashContent");
     
