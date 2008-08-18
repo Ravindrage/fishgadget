@@ -14,6 +14,7 @@ author_photo="http://abowman.com/abowman.jpg"
 author_location="Hallowell, Maine" 
 >
 <Require feature="setprefs" />
+<Require feature="flash" />
 </ModulePrefs>
 <UserPref 
     name="fishColor" 
@@ -244,9 +245,6 @@ author_location="Hallowell, Maine"
 <UserPref name="userColor5" display_name="Custom Color 5" default_value="" datatype="string"/>
   <Content type="html" view="home,canvas">
 <![CDATA[
-<script>
-  document.write('<scr' + 'ipt src="' + _IG_GetCachedUrl('http://fishgadget.googlecode.com/svn/trunk/swfobject.js') + '"></scr' + 'ipt>');
-</script>
 
 <div id="flashContent">
 </div>
@@ -270,48 +268,41 @@ function init(){
     var foodColor = prefs.getString("foodColor");
     var viewportSize = getViewportSize();
     
-    if(backgroundImage != ""){
-        _IG_GetCachedUrl(backgroundImage);
-    }
-    
-    if(backgroundColor != null){
-        backgroundColor = checkCustomColor(backgroundColor);
-        bgcolor = backgroundColor;
-    }
-
-    var so = new SWFObject(movie, "fish", "100%", "100%", "6", "#"+ bgcolor);
-    so.addParam("wmode","opaque");
+    var fvars = "";
     
     resize();
     window.onresize = resize;
     
+    if(backgroundImage != ""){
+        fvars += "&backgroundImageCached="+ _IG_GetCachedUrl(backgroundImage);
+    }
+    
     for(var i=1;i <= 10;i++){
 	    fishColor = prefs.getString("fishColor"+i);
 	    fishColor = checkCustomColor(fishColor);
-	    so.addVariable("up_fishColor"+ i , fishColor);
-    }
-    
-    if(numFish != null){
-        so.addVariable("up_numFish", numFish);
+	    fvars += "&fishColor"+ i;
     }
     
     if(foodColor != null){
     	foodColor = checkCustomColor(foodColor);
-        so.addVariable("up_foodColor", foodColor);
+        fvars += "&foodColor"+ foodColor;
     }
     
     if(backgroundColor != null){
-        so.addVariable("up_backgroundColor", backgroundColor);
+        backgroundColor = checkCustomColor(backgroundColor);
+        bgColor = backgroundColor;
+        fvars += "&backgroundColor"+ backgroundColor;
     }
     
-    if(backgroundImage != null  && backgroundImage != "http://"){
-        so.addVariable("up_backgroundImage", backgroundImage);
-    }
-    
-    so.addVariable("up_height", viewportSize.h);
-    so.addVariable("up_width", viewportSize.w);
-    
-    so.write("flashContent");
+    _IG_EmbedFlash(swfURL, "flashContent", {
+        swf_version: 8,
+        id: "flashid",
+        width: "100%",
+        height: "100%",
+        bgcolor: "#"+ bgcolor,
+        flashvars: fvars,
+        AllowScriptAccess:'always'
+    });
 }
 
 function getViewportSize(){
