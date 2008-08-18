@@ -269,7 +269,6 @@ function init(){
     var viewportSize = getViewportSize();
     
     var fishColor = "";
-    
     var fvars = "";
     
     resize();
@@ -282,18 +281,18 @@ function init(){
     for(var i=1;i <= 10;i++){
 	    fishColor = prefs.getString("fishColor"+i);
 	    fishColor = checkCustomColor(fishColor);
-	    fvars += "&fishColor"+ i;
+	    fvars += "&fishColor"+ i +"="+ fishColor;
     }
     
     if(foodColor != null){
     	foodColor = checkCustomColor(foodColor);
-        fvars += "&foodColor"+ foodColor;
+        fvars += "&foodColor="+ foodColor;
     }
     
     if(backgroundColor != null){
         backgroundColor = checkCustomColor(backgroundColor);
         bgColor = backgroundColor;
-        fvars += "&backgroundColor"+ backgroundColor;
+        fvars += "&backgroundColor="+ backgroundColor;
     }
     
     _IG_EmbedFlash(swfURL, "flashContent", {
