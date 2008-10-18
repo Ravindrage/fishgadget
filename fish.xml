@@ -294,7 +294,8 @@ function init(){
         fvars += "&backgroundColor="+ backgroundColor;
     }
     
-    _IG_EmbedCachedFlash(swfURL, "flashContent", {
+    //_IG_EmbedCachedFlash(swfURL, "flashContent", {
+    _IG_EmbedFlash(swfURL, "flashContent", {
         swf_version: 8,
         id: "flashid",
         width: "100%",
