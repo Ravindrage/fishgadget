@@ -266,7 +266,6 @@ function init(){
     var backgroundColor = prefs.getString("backgroundColor");
     var backgroundImage = prefs.getString("backgroundImage");
     var foodColor = prefs.getString("foodColor");
-    var viewportSize = getViewportSize();
     
     var fishColor = "";
     var fvars = "";
