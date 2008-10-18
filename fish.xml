@@ -256,7 +256,7 @@ var prefs
 function init(){
     prefs = new _IG_Prefs();
     
-    var swfURL = _IG_GetCachedUrl("http://fishgadget.googlecode.com/svn/trunk/fish.swf?2");
+    var swfURL = "http://fishgadget.googlecode.com/svn/trunk/fish.swf";
     var bgcolor = "F0F7FF";
     var flashContent = _gel("flashContent");
     
@@ -295,7 +295,7 @@ function init(){
         fvars += "&backgroundColor="+ backgroundColor;
     }
     
-    _IG_EmbedFlash(swfURL, "flashContent", {
+    _IG_EmbedCachedFlash(swfURL, "flashContent", {
         swf_version: 8,
         id: "flashid",
         width: "100%",
@@ -306,41 +306,17 @@ function init(){
     });
 }
 
-function getViewportSize(){
-        	//thanks to http://andylangton.co.uk/articles/javascript/get-viewport-size-javascript/
-         var viewportWidth;
-         var viewportHeight;
-	 
-         if(typeof(window.innerWidth) != 'undefined'){
-	 	// the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
-              viewportWidth = window.innerWidth;
-              viewportHeight = window.innerHeight;
-         }else if(typeof(document.documentElement) != 'undefined'
-             	&& typeof(document.documentElement.clientWidth) != 'undefined' 
-		&& document.documentElement.clientWidth != 0){
-	 	// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
-               viewportWidth = document.documentElement.clientWidth;
-               viewportHeight = document.documentElement.clientHeight;
-         }else{
-	 	// older versions of IE
-               viewportWidth = document.getElementsByTagName('body')[0].clientWidth;
-               viewportHeight = document.getElementsByTagName('body')[0].clientHeight;
-         }
-	 
-         return {w:viewportWidth,h:viewportHeight};
-}
-
 function resize(){
-        var viewportSize = getViewportSize();
+        var height = document.body.clientHeight;
         var maxHeight = 400;
         
         if(prefs.getString("synd")=="ig"){
-            if(viewportSize.h > maxHeight){
-                viewportSize.h = maxHeight;
+            if(h > maxHeight){
+                h = maxHeight;
             }
         }
         
-        flashContent.style.height = viewportSize.h +"px";
+        flashContent.style.height = h +"px";
 }
     
 function checkCustomColor(color){
