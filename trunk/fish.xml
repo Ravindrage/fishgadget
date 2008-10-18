@@ -306,7 +306,7 @@ function init(){
 }
 
 function resize(){
-        var height = document.body.clientHeight;
+        var h = document.body.clientHeight;
         var maxHeight = 400;
         
         if(prefs.getString("synd")=="ig"){
