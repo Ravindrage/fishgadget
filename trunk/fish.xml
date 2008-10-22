@@ -7,8 +7,8 @@ description="Add a touch of nature to your page with these hungry little fish.  
 author="Adam Bowman"
 author_email="adbocode@gmail.com"
 title_url="http://abowman.com/google-modules/fish/"
-screenshot="http://abowman.com/projects/gadgets/fish/fish.png"
-thumbnail="http://abowman.com/projects/gadgets/fish/fishThumb.png"
+screenshot="http://hosting.gmodules.com/ig/gadgets/file/112581010116074801021/fish.png"
+thumbnail="http://hosting.gmodules.com/ig/gadgets/file/112581010116074801021/fishThumb.png"
 author_link="http://abowman.com"
 author_photo="http://abowman.com/abowman.jpg"
 author_location="Hallowell, Maine" 
@@ -251,12 +251,11 @@ author_location="Hallowell, Maine"
 <script type="text/javascript">
 _IG_RegisterOnloadHandler(init); 
 
-var prefs
+var prefs = new _IG_Prefs();
 
 function init(){
-    prefs = new _IG_Prefs();
     
-    var swfURL = "http://fishgadget.googlecode.com/svn/trunk/fish.swf";
+    var swfURL = "http://hosting.gmodules.com/ig/gadgets/file/112581010116074801021/fish.swf";
     var bgcolor = "F0F7FF";
     var flashContent = _gel("flashContent");
     
@@ -302,6 +301,8 @@ function init(){
         height: "100%",
         bgcolor: "#"+ bgcolor,
         flashvars: fvars,
+        scale:"noscale",
+        salign:"tl",
         AllowScriptAccess:'always'
     });
 }
