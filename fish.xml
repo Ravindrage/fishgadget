@@ -255,7 +255,7 @@ var prefs = new _IG_Prefs();
 
 function init(){
     
-    var swfURL = "http://hosting.gmodules.com/ig/gadgets/file/112581010116074801021/fish.swf?2";
+    var swfURL = "http://hosting.gmodules.com/ig/gadgets/file/112581010116074801021/fish.swf";
     var bgcolor = "F0F7FF";
     var flashContent = _gel("flashContent");
     
