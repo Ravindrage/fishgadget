@@ -1,249 +1,234 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-<ModulePrefs title="__UP_fishName__" 
-directory_title="Fish"
-category="funandgames" 
-description="Add a touch of nature to your page with these hungry little fish.  Watch how they eagerly swim toward your mouse hoping that you’ll drop a few flakes of food.  Click the down arrow and then Edit Settings to change the number of fish, the color of each fish, and the color of the water. You can also add an image to the background."
-author="Adam Bowman"
-author_email="adbocode@gmail.com"
-title_url="http://abowman.com/google-modules/fish/"
-screenshot="http://hosting.gmodules.com/ig/gadgets/file/112581010116074801021/fish.png"
-thumbnail="http://hosting.gmodules.com/ig/gadgets/file/112581010116074801021/fishThumb.png"
-author_link="http://abowman.com"
-author_photo="http://abowman.com/abowman.jpg"
-author_location="Hallowell, Maine" 
->
+<ModulePrefs author="Adam Bowman" author_email="adbocode@gmail.com" author_link="http://abowman.com" author_location="Hallowell, Maine" author_photo="http://abowman.com/abowman.jpg" category="funandgames" description="Add a touch of nature to your page with these hungry little fish.  Watch how they eagerly swim toward your mouse hoping that you&#8217;ll drop a few flakes of food.  Click the down arrow and then Edit Settings to change the number of fish, the color of each fish, and the color of the water. You can also add an image to the background." directory_title="Fish" screenshot="http://hosting.gmodules.com/ig/gadgets/file/112581010116074801021/fish.png" thumbnail="http://hosting.gmodules.com/ig/gadgets/file/112581010116074801021/fishThumb.png" title="__UP_fishName__" title_url="http://abowman.com/google-modules/fish/">
 <Require feature="setprefs" />
 <Require feature="flash" />
 </ModulePrefs>
-<UserPref 
-    name="fishColor" 
-    default_value="none"
-    datatype="hidden"/>
- <UserPref name="fishName" display_name="Name" default_value="Fish" datatype="string"/>
- <UserPref name="backgroundColor" display_name="Background Color" default_value="F0F7FF" datatype="enum">
-   <EnumValue value="000000" display_value="Black"/>
-   <EnumValue value="0E30B7" display_value="Blue"/>
-   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
-   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
-   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
-   <EnumValue value="33CC33" display_value="Green"/>
-   <EnumValue value="FEB859" display_value="Orange"/>
-   <EnumValue value="F45540" display_value="Red"/>
-   <EnumValue value="FFFFFF" display_value="White"/>
-   <EnumValue value="FFE114" display_value="Yellow"/>
-   <EnumValue value="userColor1" display_value="Custom Color 1"/>
-   <EnumValue value="userColor2" display_value="Custom Color 2"/>
-   <EnumValue value="userColor3" display_value="Custom Color 3"/>
-   <EnumValue value="userColor4" display_value="Custom Color 4"/>
-   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+<UserPref datatype="hidden" default_value="none" name="fishColor" />
+ <UserPref datatype="string" default_value="Fish" display_name="Name" name="fishName" />
+ <UserPref datatype="enum" default_value="F0F7FF" display_name="Background Color" name="backgroundColor">
+   <EnumValue display_value="Black" value="000000" />
+   <EnumValue display_value="Blue" value="0E30B7" />
+   <EnumValue display_value="Lite-Blue" value="F0F7FF" />
+   <EnumValue display_value="Tea House Blue" value="97B6A6" />
+   <EnumValue display_value="Tea House Lite-Blue" value="BFD1C1" />
+   <EnumValue display_value="Green" value="33CC33" />
+   <EnumValue display_value="Orange" value="FEB859" />
+   <EnumValue display_value="Red" value="F45540" />
+   <EnumValue display_value="White" value="FFFFFF" />
+   <EnumValue display_value="Yellow" value="FFE114" />
+   <EnumValue display_value="Custom Color 1" value="userColor1" />
+   <EnumValue display_value="Custom Color 2" value="userColor2" />
+   <EnumValue display_value="Custom Color 3" value="userColor3" />
+   <EnumValue display_value="Custom Color 4" value="userColor4" />
+   <EnumValue display_value="Custom Color 5" value="userColor5" />
  </UserPref>
- <UserPref name="backgroundImage" display_name="Background Image (jpg)" default_value="http://" datatype="string"/>
-  <UserPref name="numFish" display_name="Number of Fish" default_value="5" datatype="enum">
-   <EnumValue value="10" display_value="10"/>
-   <EnumValue value="9" display_value="9"/>
-   <EnumValue value="8" display_value="8"/>
-   <EnumValue value="7" display_value="7"/>
-   <EnumValue value="6" display_value="6"/>
-   <EnumValue value="5" display_value="5"/>
-   <EnumValue value="4" display_value="4"/>
-   <EnumValue value="3" display_value="3"/>
-   <EnumValue value="2" display_value="2"/>
-   <EnumValue value="1" display_value="1"/>
+ <UserPref datatype="string" default_value="http://" display_name="Background Image (jpg)" name="backgroundImage" />
+  <UserPref datatype="enum" default_value="5" display_name="Number of Fish" name="numFish">
+   <EnumValue display_value="10" value="10" />
+   <EnumValue display_value="9" value="9" />
+   <EnumValue display_value="8" value="8" />
+   <EnumValue display_value="7" value="7" />
+   <EnumValue display_value="6" value="6" />
+   <EnumValue display_value="5" value="5" />
+   <EnumValue display_value="4" value="4" />
+   <EnumValue display_value="3" value="3" />
+   <EnumValue display_value="2" value="2" />
+   <EnumValue display_value="1" value="1" />
  </UserPref>
- <UserPref name="fishColor1" display_name="Fish 1 Color" default_value="F45540" datatype="enum">
-   <EnumValue value="000000" display_value="Black"/>
-   <EnumValue value="0E30B7" display_value="Blue"/>
-   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
-   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
-   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
-   <EnumValue value="33CC33" display_value="Green"/>
-   <EnumValue value="FEB859" display_value="Orange"/>
-   <EnumValue value="F45540" display_value="Red"/>
-   <EnumValue value="FFFFFF" display_value="White"/>
-   <EnumValue value="FFE114" display_value="Yellow"/>
-   <EnumValue value="userColor1" display_value="Custom Color 1"/>
-   <EnumValue value="userColor2" display_value="Custom Color 2"/>
-   <EnumValue value="userColor3" display_value="Custom Color 3"/>
-   <EnumValue value="userColor4" display_value="Custom Color 4"/>
-   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ <UserPref datatype="enum" default_value="F45540" display_name="Fish 1 Color" name="fishColor1">
+   <EnumValue display_value="Black" value="000000" />
+   <EnumValue display_value="Blue" value="0E30B7" />
+   <EnumValue display_value="Lite-Blue" value="F0F7FF" />
+   <EnumValue display_value="Tea House Blue" value="97B6A6" />
+   <EnumValue display_value="Tea House Lite-Blue" value="BFD1C1" />
+   <EnumValue display_value="Green" value="33CC33" />
+   <EnumValue display_value="Orange" value="FEB859" />
+   <EnumValue display_value="Red" value="F45540" />
+   <EnumValue display_value="White" value="FFFFFF" />
+   <EnumValue display_value="Yellow" value="FFE114" />
+   <EnumValue display_value="Custom Color 1" value="userColor1" />
+   <EnumValue display_value="Custom Color 2" value="userColor2" />
+   <EnumValue display_value="Custom Color 3" value="userColor3" />
+   <EnumValue display_value="Custom Color 4" value="userColor4" />
+   <EnumValue display_value="Custom Color 5" value="userColor5" />
  </UserPref>
- <UserPref name="fishColor2" display_name="Fish 2 Color" default_value="F45540" datatype="enum">
-   <EnumValue value="000000" display_value="Black"/>
-   <EnumValue value="0E30B7" display_value="Blue"/>
-   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
-   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
-   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
-   <EnumValue value="33CC33" display_value="Green"/>
-   <EnumValue value="FEB859" display_value="Orange"/>
-   <EnumValue value="F45540" display_value="Red"/>
-   <EnumValue value="FFFFFF" display_value="White"/>
-   <EnumValue value="FFE114" display_value="Yellow"/>
-   <EnumValue value="userColor1" display_value="Custom Color 1"/>
-   <EnumValue value="userColor2" display_value="Custom Color 2"/>
-   <EnumValue value="userColor3" display_value="Custom Color 3"/>
-   <EnumValue value="userColor4" display_value="Custom Color 4"/>
-   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ <UserPref datatype="enum" default_value="F45540" display_name="Fish 2 Color" name="fishColor2">
+   <EnumValue display_value="Black" value="000000" />
+   <EnumValue display_value="Blue" value="0E30B7" />
+   <EnumValue display_value="Lite-Blue" value="F0F7FF" />
+   <EnumValue display_value="Tea House Blue" value="97B6A6" />
+   <EnumValue display_value="Tea House Lite-Blue" value="BFD1C1" />
+   <EnumValue display_value="Green" value="33CC33" />
+   <EnumValue display_value="Orange" value="FEB859" />
+   <EnumValue display_value="Red" value="F45540" />
+   <EnumValue display_value="White" value="FFFFFF" />
+   <EnumValue display_value="Yellow" value="FFE114" />
+   <EnumValue display_value="Custom Color 1" value="userColor1" />
+   <EnumValue display_value="Custom Color 2" value="userColor2" />
+   <EnumValue display_value="Custom Color 3" value="userColor3" />
+   <EnumValue display_value="Custom Color 4" value="userColor4" />
+   <EnumValue display_value="Custom Color 5" value="userColor5" />
  </UserPref>
- <UserPref name="fishColor3" display_name="Fish 3 Color" default_value="F45540" datatype="enum">
-   <EnumValue value="000000" display_value="Black"/>
-   <EnumValue value="0E30B7" display_value="Blue"/>
-   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
-    <EnumValue value="97B6A6" display_value="Tea House Blue"/>
-   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
-   <EnumValue value="33CC33" display_value="Green"/>
-   <EnumValue value="FEB859" display_value="Orange"/>
-   <EnumValue value="F45540" display_value="Red"/>
-   <EnumValue value="FFFFFF" display_value="White"/>
-   <EnumValue value="FFE114" display_value="Yellow"/>
-   <EnumValue value="userColor1" display_value="Custom Color 1"/>
-   <EnumValue value="userColor2" display_value="Custom Color 2"/>
-   <EnumValue value="userColor3" display_value="Custom Color 3"/>
-   <EnumValue value="userColor4" display_value="Custom Color 4"/>
-   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ <UserPref datatype="enum" default_value="F45540" display_name="Fish 3 Color" name="fishColor3">
+   <EnumValue display_value="Black" value="000000" />
+   <EnumValue display_value="Blue" value="0E30B7" />
+   <EnumValue display_value="Lite-Blue" value="F0F7FF" />
+    <EnumValue display_value="Tea House Blue" value="97B6A6" />
+   <EnumValue display_value="Tea House Lite-Blue" value="BFD1C1" />
+   <EnumValue display_value="Green" value="33CC33" />
+   <EnumValue display_value="Orange" value="FEB859" />
+   <EnumValue display_value="Red" value="F45540" />
+   <EnumValue display_value="White" value="FFFFFF" />
+   <EnumValue display_value="Yellow" value="FFE114" />
+   <EnumValue display_value="Custom Color 1" value="userColor1" />
+   <EnumValue display_value="Custom Color 2" value="userColor2" />
+   <EnumValue display_value="Custom Color 3" value="userColor3" />
+   <EnumValue display_value="Custom Color 4" value="userColor4" />
+   <EnumValue display_value="Custom Color 5" value="userColor5" />
  </UserPref>
- <UserPref name="fishColor4" display_name="Fish 4 Color" default_value="F45540" datatype="enum">
-   <EnumValue value="000000" display_value="Black"/>
-   <EnumValue value="0E30B7" display_value="Blue"/>
-   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
-   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
-   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
-   <EnumValue value="33CC33" display_value="Green"/>
-   <EnumValue value="FEB859" display_value="Orange"/>
-   <EnumValue value="F45540" display_value="Red"/>
-   <EnumValue value="FFFFFF" display_value="White"/>
-   <EnumValue value="FFE114" display_value="Yellow"/>
-   <EnumValue value="userColor1" display_value="Custom Color 1"/>
-   <EnumValue value="userColor2" display_value="Custom Color 2"/>
-   <EnumValue value="userColor3" display_value="Custom Color 3"/>
-   <EnumValue value="userColor4" display_value="Custom Color 4"/>
-   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ <UserPref datatype="enum" default_value="F45540" display_name="Fish 4 Color" name="fishColor4">
+   <EnumValue display_value="Black" value="000000" />
+   <EnumValue display_value="Blue" value="0E30B7" />
+   <EnumValue display_value="Lite-Blue" value="F0F7FF" />
+   <EnumValue display_value="Tea House Blue" value="97B6A6" />
+   <EnumValue display_value="Tea House Lite-Blue" value="BFD1C1" />
+   <EnumValue display_value="Green" value="33CC33" />
+   <EnumValue display_value="Orange" value="FEB859" />
+   <EnumValue display_value="Red" value="F45540" />
+   <EnumValue display_value="White" value="FFFFFF" />
+   <EnumValue display_value="Yellow" value="FFE114" />
+   <EnumValue display_value="Custom Color 1" value="userColor1" />
+   <EnumValue display_value="Custom Color 2" value="userColor2" />
+   <EnumValue display_value="Custom Color 3" value="userColor3" />
+   <EnumValue display_value="Custom Color 4" value="userColor4" />
+   <EnumValue display_value="Custom Color 5" value="userColor5" />
  </UserPref>
- <UserPref name="fishColor5" display_name="Fish 5 Color" default_value="F45540" datatype="enum">
-   <EnumValue value="000000" display_value="Black"/>
-   <EnumValue value="0E30B7" display_value="Blue"/>
-   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
-   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
-   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
-   <EnumValue value="33CC33" display_value="Green"/>
-   <EnumValue value="FEB859" display_value="Orange"/>
-   <EnumValue value="F45540" display_value="Red"/>
-   <EnumValue value="FFFFFF" display_value="White"/>
-   <EnumValue value="FFE114" display_value="Yellow"/>
-   <EnumValue value="userColor1" display_value="Custom Color 1"/>
-   <EnumValue value="userColor2" display_value="Custom Color 2"/>
-   <EnumValue value="userColor3" display_value="Custom Color 3"/>
-   <EnumValue value="userColor4" display_value="Custom Color 4"/>
-   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ <UserPref datatype="enum" default_value="F45540" display_name="Fish 5 Color" name="fishColor5">
+   <EnumValue display_value="Black" value="000000" />
+   <EnumValue display_value="Blue" value="0E30B7" />
+   <EnumValue display_value="Lite-Blue" value="F0F7FF" />
+   <EnumValue display_value="Tea House Blue" value="97B6A6" />
+   <EnumValue display_value="Tea House Lite-Blue" value="BFD1C1" />
+   <EnumValue display_value="Green" value="33CC33" />
+   <EnumValue display_value="Orange" value="FEB859" />
+   <EnumValue display_value="Red" value="F45540" />
+   <EnumValue display_value="White" value="FFFFFF" />
+   <EnumValue display_value="Yellow" value="FFE114" />
+   <EnumValue display_value="Custom Color 1" value="userColor1" />
+   <EnumValue display_value="Custom Color 2" value="userColor2" />
+   <EnumValue display_value="Custom Color 3" value="userColor3" />
+   <EnumValue display_value="Custom Color 4" value="userColor4" />
+   <EnumValue display_value="Custom Color 5" value="userColor5" />
  </UserPref>
- <UserPref name="fishColor6" display_name="Fish 6 Color" default_value="F45540" datatype="enum">
-   <EnumValue value="000000" display_value="Black"/>
-   <EnumValue value="0E30B7" display_value="Blue"/>
-   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
-   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
-   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
-   <EnumValue value="33CC33" display_value="Green"/>
-   <EnumValue value="FEB859" display_value="Orange"/>
-   <EnumValue value="F45540" display_value="Red"/>
-   <EnumValue value="FFFFFF" display_value="White"/>
-   <EnumValue value="FFE114" display_value="Yellow"/>
-   <EnumValue value="userColor1" display_value="Custom Color 1"/>
-   <EnumValue value="userColor2" display_value="Custom Color 2"/>
-   <EnumValue value="userColor3" display_value="Custom Color 3"/>
-   <EnumValue value="userColor4" display_value="Custom Color 4"/>
-   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ <UserPref datatype="enum" default_value="F45540" display_name="Fish 6 Color" name="fishColor6">
+   <EnumValue display_value="Black" value="000000" />
+   <EnumValue display_value="Blue" value="0E30B7" />
+   <EnumValue display_value="Lite-Blue" value="F0F7FF" />
+   <EnumValue display_value="Tea House Blue" value="97B6A6" />
+   <EnumValue display_value="Tea House Lite-Blue" value="BFD1C1" />
+   <EnumValue display_value="Green" value="33CC33" />
+   <EnumValue display_value="Orange" value="FEB859" />
+   <EnumValue display_value="Red" value="F45540" />
+   <EnumValue display_value="White" value="FFFFFF" />
+   <EnumValue display_value="Yellow" value="FFE114" />
+   <EnumValue display_value="Custom Color 1" value="userColor1" />
+   <EnumValue display_value="Custom Color 2" value="userColor2" />
+   <EnumValue display_value="Custom Color 3" value="userColor3" />
+   <EnumValue display_value="Custom Color 4" value="userColor4" />
+   <EnumValue display_value="Custom Color 5" value="userColor5" />
  </UserPref>
- <UserPref name="fishColor7" display_name="Fish 7 Color" default_value="F45540" datatype="enum">
-   <EnumValue value="000000" display_value="Black"/>
-   <EnumValue value="0E30B7" display_value="Blue"/>
-   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
-   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
-   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
-   <EnumValue value="33CC33" display_value="Green"/>
-   <EnumValue value="FEB859" display_value="Orange"/>
-   <EnumValue value="F45540" display_value="Red"/>
-   <EnumValue value="FFFFFF" display_value="White"/>
-   <EnumValue value="FFE114" display_value="Yellow"/>
-   <EnumValue value="userColor1" display_value="Custom Color 1"/>
-   <EnumValue value="userColor2" display_value="Custom Color 2"/>
-   <EnumValue value="userColor3" display_value="Custom Color 3"/>
-   <EnumValue value="userColor4" display_value="Custom Color 4"/>
-   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ <UserPref datatype="enum" default_value="F45540" display_name="Fish 7 Color" name="fishColor7">
+   <EnumValue display_value="Black" value="000000" />
+   <EnumValue display_value="Blue" value="0E30B7" />
+   <EnumValue display_value="Lite-Blue" value="F0F7FF" />
+   <EnumValue display_value="Tea House Blue" value="97B6A6" />
+   <EnumValue display_value="Tea House Lite-Blue" value="BFD1C1" />
+   <EnumValue display_value="Green" value="33CC33" />
+   <EnumValue display_value="Orange" value="FEB859" />
+   <EnumValue display_value="Red" value="F45540" />
+   <EnumValue display_value="White" value="FFFFFF" />
+   <EnumValue display_value="Yellow" value="FFE114" />
+   <EnumValue display_value="Custom Color 1" value="userColor1" />
+   <EnumValue display_value="Custom Color 2" value="userColor2" />
+   <EnumValue display_value="Custom Color 3" value="userColor3" />
+   <EnumValue display_value="Custom Color 4" value="userColor4" />
+   <EnumValue display_value="Custom Color 5" value="userColor5" />
  </UserPref>
- <UserPref name="fishColor8" display_name="Fish 8 Color" default_value="F45540" datatype="enum">
-   <EnumValue value="000000" display_value="Black"/>
-   <EnumValue value="0E30B7" display_value="Blue"/>
-   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
-   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
-   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
-   <EnumValue value="33CC33" display_value="Green"/>
-   <EnumValue value="FEB859" display_value="Orange"/>
-   <EnumValue value="F45540" display_value="Red"/>
-   <EnumValue value="FFFFFF" display_value="White"/>
-   <EnumValue value="FFE114" display_value="Yellow"/>
-   <EnumValue value="userColor1" display_value="Custom Color 1"/>
-   <EnumValue value="userColor2" display_value="Custom Color 2"/>
-   <EnumValue value="userColor3" display_value="Custom Color 3"/>
-   <EnumValue value="userColor4" display_value="Custom Color 4"/>
-   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ <UserPref datatype="enum" default_value="F45540" display_name="Fish 8 Color" name="fishColor8">
+   <EnumValue display_value="Black" value="000000" />
+   <EnumValue display_value="Blue" value="0E30B7" />
+   <EnumValue display_value="Lite-Blue" value="F0F7FF" />
+   <EnumValue display_value="Tea House Blue" value="97B6A6" />
+   <EnumValue display_value="Tea House Lite-Blue" value="BFD1C1" />
+   <EnumValue display_value="Green" value="33CC33" />
+   <EnumValue display_value="Orange" value="FEB859" />
+   <EnumValue display_value="Red" value="F45540" />
+   <EnumValue display_value="White" value="FFFFFF" />
+   <EnumValue display_value="Yellow" value="FFE114" />
+   <EnumValue display_value="Custom Color 1" value="userColor1" />
+   <EnumValue display_value="Custom Color 2" value="userColor2" />
+   <EnumValue display_value="Custom Color 3" value="userColor3" />
+   <EnumValue display_value="Custom Color 4" value="userColor4" />
+   <EnumValue display_value="Custom Color 5" value="userColor5" />
  </UserPref>
- <UserPref name="fishColor9" display_name="Fish 9 Color" default_value="F45540" datatype="enum">
-   <EnumValue value="000000" display_value="Black"/>
-   <EnumValue value="0E30B7" display_value="Blue"/>
-   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
-   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
-   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
-   <EnumValue value="33CC33" display_value="Green"/>
-   <EnumValue value="FEB859" display_value="Orange"/>
-   <EnumValue value="F45540" display_value="Red"/>
-   <EnumValue value="FFFFFF" display_value="White"/>
-   <EnumValue value="FFE114" display_value="Yellow"/>
-   <EnumValue value="userColor1" display_value="Custom Color 1"/>
-   <EnumValue value="userColor2" display_value="Custom Color 2"/>
-   <EnumValue value="userColor3" display_value="Custom Color 3"/>
-   <EnumValue value="userColor4" display_value="Custom Color 4"/>
-   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ <UserPref datatype="enum" default_value="F45540" display_name="Fish 9 Color" name="fishColor9">
+   <EnumValue display_value="Black" value="000000" />
+   <EnumValue display_value="Blue" value="0E30B7" />
+   <EnumValue display_value="Lite-Blue" value="F0F7FF" />
+   <EnumValue display_value="Tea House Blue" value="97B6A6" />
+   <EnumValue display_value="Tea House Lite-Blue" value="BFD1C1" />
+   <EnumValue display_value="Green" value="33CC33" />
+   <EnumValue display_value="Orange" value="FEB859" />
+   <EnumValue display_value="Red" value="F45540" />
+   <EnumValue display_value="White" value="FFFFFF" />
+   <EnumValue display_value="Yellow" value="FFE114" />
+   <EnumValue display_value="Custom Color 1" value="userColor1" />
+   <EnumValue display_value="Custom Color 2" value="userColor2" />
+   <EnumValue display_value="Custom Color 3" value="userColor3" />
+   <EnumValue display_value="Custom Color 4" value="userColor4" />
+   <EnumValue display_value="Custom Color 5" value="userColor5" />
  </UserPref>
- <UserPref name="fishColor10" display_name="Fish 10 Color" default_value="F45540" datatype="enum">
-   <EnumValue value="000000" display_value="Black"/>
-   <EnumValue value="0E30B7" display_value="Blue"/>
-   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
-   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
-   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
-   <EnumValue value="33CC33" display_value="Green"/>
-   <EnumValue value="FEB859" display_value="Orange"/>
-   <EnumValue value="F45540" display_value="Red"/>
-   <EnumValue value="FFFFFF" display_value="White"/>
-   <EnumValue value="FFE114" display_value="Yellow"/>
-   <EnumValue value="userColor1" display_value="Custom Color 1"/>
-   <EnumValue value="userColor2" display_value="Custom Color 2"/>
-   <EnumValue value="userColor3" display_value="Custom Color 3"/>
-   <EnumValue value="userColor4" display_value="Custom Color 4"/>
-   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ <UserPref datatype="enum" default_value="F45540" display_name="Fish 10 Color" name="fishColor10">
+   <EnumValue display_value="Black" value="000000" />
+   <EnumValue display_value="Blue" value="0E30B7" />
+   <EnumValue display_value="Lite-Blue" value="F0F7FF" />
+   <EnumValue display_value="Tea House Blue" value="97B6A6" />
+   <EnumValue display_value="Tea House Lite-Blue" value="BFD1C1" />
+   <EnumValue display_value="Green" value="33CC33" />
+   <EnumValue display_value="Orange" value="FEB859" />
+   <EnumValue display_value="Red" value="F45540" />
+   <EnumValue display_value="White" value="FFFFFF" />
+   <EnumValue display_value="Yellow" value="FFE114" />
+   <EnumValue display_value="Custom Color 1" value="userColor1" />
+   <EnumValue display_value="Custom Color 2" value="userColor2" />
+   <EnumValue display_value="Custom Color 3" value="userColor3" />
+   <EnumValue display_value="Custom Color 4" value="userColor4" />
+   <EnumValue display_value="Custom Color 5" value="userColor5" />
  </UserPref>
- <UserPref name="foodColor" display_name="Food Color" default_value="FCB347" datatype="enum">
-   <EnumValue value="000000" display_value="Black"/>
-   <EnumValue value="0E30B7" display_value="Blue"/>
-   <EnumValue value="F0F7FF" display_value="Lite-Blue"/>
-   <EnumValue value="97B6A6" display_value="Tea House Blue"/>
-   <EnumValue value="BFD1C1" display_value="Tea House Lite-Blue"/>
-   <EnumValue value="33CC33" display_value="Green"/>
-   <EnumValue value="FCB347" display_value="Orange"/>
-   <EnumValue value="F45540" display_value="Red"/>
-   <EnumValue value="FFFFFF" display_value="White"/>
-   <EnumValue value="FFE114" display_value="Yellow"/>
-   <EnumValue value="userColor1" display_value="Custom Color 1"/>
-   <EnumValue value="userColor2" display_value="Custom Color 2"/>
-   <EnumValue value="userColor3" display_value="Custom Color 3"/>
-   <EnumValue value="userColor4" display_value="Custom Color 4"/>
-   <EnumValue value="userColor5" display_value="Custom Color 5"/>
+ <UserPref datatype="enum" default_value="FCB347" display_name="Food Color" name="foodColor">
+   <EnumValue display_value="Black" value="000000" />
+   <EnumValue display_value="Blue" value="0E30B7" />
+   <EnumValue display_value="Lite-Blue" value="F0F7FF" />
+   <EnumValue display_value="Tea House Blue" value="97B6A6" />
+   <EnumValue display_value="Tea House Lite-Blue" value="BFD1C1" />
+   <EnumValue display_value="Green" value="33CC33" />
+   <EnumValue display_value="Orange" value="FCB347" />
+   <EnumValue display_value="Red" value="F45540" />
+   <EnumValue display_value="White" value="FFFFFF" />
+   <EnumValue display_value="Yellow" value="FFE114" />
+   <EnumValue display_value="Custom Color 1" value="userColor1" />
+   <EnumValue display_value="Custom Color 2" value="userColor2" />
+   <EnumValue display_value="Custom Color 3" value="userColor3" />
+   <EnumValue display_value="Custom Color 4" value="userColor4" />
+   <EnumValue display_value="Custom Color 5" value="userColor5" />
  </UserPref>
-<UserPref name="userColor1" display_name="Custom Color 1" default_value="" datatype="string"/>
-<UserPref name="userColor2" display_name="Custom Color 2" default_value="" datatype="string"/>
-<UserPref name="userColor3" display_name="Custom Color 3" default_value="" datatype="string"/>
-<UserPref name="userColor4" display_name="Custom Color 4" default_value="" datatype="string"/>
-<UserPref name="userColor5" display_name="Custom Color 5" default_value="" datatype="string"/>
-  <Content type="html" view="home,canvas">
+<UserPref datatype="string" default_value="" display_name="Custom Color 1" name="userColor1" />
+<UserPref datatype="string" default_value="" display_name="Custom Color 2" name="userColor2" />
+<UserPref datatype="string" default_value="" display_name="Custom Color 3" name="userColor3" />
+<UserPref datatype="string" default_value="" display_name="Custom Color 4" name="userColor4" />
+<UserPref datatype="string" default_value="" display_name="Custom Color 5" name="userColor5" />
+<Content type="html">
 <![CDATA[
 
 <div id="flashContent">
@@ -349,4 +334,114 @@ function getArgsAsFlashVars(){
 
   ]]> 
   </Content>
+  <Content type="html" view="home,canvas">
+<![CDATA[
+<script type="text/javascript">
+function _IG_EmbedFlash(swf_url, swf_container, opt_params) {   return gadgets.flash.embedFlash(swf_url,  swf_container,  opt_params.swf_version,  opt_params); }
+function _IG_EmbedCachedFlash(swf_url, swf_container, opt_params) {   return gadgets.flash.embedCachedFlash(swf_url,  swf_container, opt_params.swf_version,  opt_params); }
+</script>
+]]><![CDATA[
+
+<div id="flashContent">
+</div>
+<script type="text/javascript">
+gadgets.util.registerOnLoadHandler(init); 
+
+var prefs = new gadgets.Prefs();
+
+function init(){
+    
+    var swfURL = "http://hosting.gmodules.com/ig/gadgets/file/112581010116074801021/fish.swf?3";
+    var bgcolor = "F0F7FF";
+    var flashContent = document.getElementById("flashContent");
+    
+    var numFish = prefs.getString("numFish");
+    
+    var fishColors = new Array();
+    var backgroundColor = prefs.getString("backgroundColor");
+    var backgroundImage = prefs.getString("backgroundImage");
+    var foodColor = prefs.getString("foodColor");
+    
+    var fishColor = "";
+    var fvars = "";
+    
+    resize();
+    window.onresize = resize;
+    
+    if(backgroundImage != ""){
+        fvars += "&backgroundImageCached="+ gadgets.io.getProxyUrl(backgroundImage);
+    }
+    
+    for(var i=1;i <= 10;i++){
+	    fishColor = prefs.getString("fishColor"+i);
+	    fishColor = checkCustomColor(fishColor);
+	    fvars += "&fishColor"+ i +"="+ fishColor;
+    }
+    
+    if(foodColor != null){
+    	foodColor = checkCustomColor(foodColor);
+        fvars += "&foodColor="+ foodColor;
+    }
+    
+    if(backgroundColor != null){
+        backgroundColor = checkCustomColor(backgroundColor);
+        bgColor = backgroundColor;
+        fvars += "&backgroundColor="+ backgroundColor;
+    }
+    
+    //_IG_EmbedCachedFlash(swfURL, "flashContent", {
+    _IG_EmbedFlash(swfURL, "flashContent", {
+        swf_version: 8,
+        id: "flashid",
+        width: "100%",
+        height: "100%",
+        bgcolor: "#"+ bgcolor,
+        flashvars: fvars + "&"+ getArgsAsFlashVars(),
+        scale:"noscale",
+        //salign:"tl",
+        AllowScriptAccess:'always'
+    });
+}
+
+function resize(){
+        var flashContent = document.getElementById("flashContent");
+
+        var h = document.body.clientHeight;
+        var maxHeight = 400;
+        
+        if(prefs.getString("synd")=="ig"){
+            if(h > maxHeight){
+                h = maxHeight;
+            }
+        }
+        
+        flashContent.style.height = h +"px";
+}
+    
+function checkCustomColor(color){
+        //var prefs = new gadgets.Prefs();
+        if(color.substring(0,4)=="user")
+            return prefs.getString(color);
+        else
+            return color;
+}
+
+function getArgsAsFlashVars(){
+    var args = gadgets.util.getUrlParameters();
+    var arrArgs = new Array();
+
+    for (var arg in args)
+    {
+    arrArgs.push(arg);
+    arrArgs.push("=");
+    arrArgs.push(encodeURIComponent(args[arg]));
+    arrArgs.push("&");
+    }
+
+    return arrArgs.join("");
+}
+
+</script>
+
+  ]]></Content>
 </Module>
