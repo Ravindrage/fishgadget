@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:widget="http://www.netvibes.com/ns/">
+    <head>
+        <title>Fish</title>
+        <meta name="author" content="Adam Bowman" />
+        <meta name="description" content="Add a touch of nature to your page with these hungry little fish. Watch how they eagerly swim toward your mouse hoping that you’ll drop a few flakes of food. Click the down arrow and then Edit Settings to change the number of fish, the color of each fish, and the color of the water." />
+
+        <link rel="stylesheet" type="text/css"
+            href="http://uwa.netvibes.com/lib/c/UWA/assets/css/standalone.css" />
+        <script type="text/javascript"
+            src="http://uwa.netvibes.com/lib/c/UWA/js/UWA_Standalone_Alone.js"></script>
+			
+		<script type="text/javascript"
+			src="http://uwa.netvibes.com/lib/c/UWA/js/UWA_Controls_Flash.js"></script>
+		
+		<script type="text/javascript"
+			src="http://d2fy09acxvuqxd.cloudfront.net/widgets/js/colors.js"></script>
+					
+		<!-- Application Preferences -->
+        <widget:preferences>
+			<widget:preference name="up_fishName" type="text" label="Title" defaultValue="Fish"></widget:preference>
+			<widget:preference name="up_backgroundColor" type="text" label="Water Color" defaultValue="F0F7FF"></widget:preference>
+			<widget:preference name="up_foodColor" type="text" label="Food Color" defaultValue="FCB347"></widget:preference>
+			<widget:preference name="up_numFish" type="list" label="Number of Fishs" defaultValue="5">
+                <widget:option label="10" value="10"></widget:option>
+                <widget:option label="9" value="9"></widget:option>
+                <widget:option label="8" value="8"></widget:option>
+                <widget:option label="7" value="7"></widget:option>
+				<widget:option label="6" value="6"></widget:option>
+				<widget:option label="5" value="5"></widget:option>
+                <widget:option label="4" value="4"></widget:option>
+                <widget:option label="3" value="3"></widget:option>
+                <widget:option label="2" value="2"></widget:option>
+				<widget:option label="1" value="1"></widget:option>
+            </widget:preference>
+            <widget:preference name="up_fishColor1" type="text" label="Fish 1 Color" defaultValue="F45540"></widget:preference>
+			<widget:preference name="up_fishColor2" type="text" label="Fish 2 Color" defaultValue="F45540"></widget:preference>
+			<widget:preference name="up_fishColor3" type="text" label="Fish 3 Color" defaultValue="F45540"></widget:preference>
+			<widget:preference name="up_fishColor4" type="text" label="Fish 4 Color" defaultValue="F45540"></widget:preference>
+			<widget:preference name="up_fishColor5" type="text" label="Fish 5 Color" defaultValue="F45540"></widget:preference>
+			<widget:preference name="up_fishColor6" type="text" label="Fish 6 Color" defaultValue="F45540"></widget:preference>
+			<widget:preference name="up_fishColor7" type="text" label="Fish 7 Color" defaultValue="F45540"></widget:preference>
+			<widget:preference name="up_fishColor8" type="text" label="Fish 8 Color" defaultValue="F45540"></widget:preference>
+			<widget:preference name="up_fishColor9" type="text" label="Fish 9 Color" defaultValue="F45540"></widget:preference>
+			<widget:preference name="up_fishColor10" type="text" label="Fish 10 Color" defaultValue="F45540"></widget:preference>
+			<widget:preference name="up_backgroundImage" type="text" label="Background Image (jpg)" defaultValue="http://"></widget:preference>
+		</widget:preferences>
+		
+        <script type="text/javascript">
+        //<![CDATA[
+
+			function getPref(pref,flashVars){
+				var prefs = flashVars;
+				var s1 = prefs.indexOf(pref);
+				var val = undefined;
+				
+				if(s1 != -1){
+					s1 += pref.length+1;
+					val = prefs.substring(s1,prefs.length);
+					val = val.substring(0,val.indexOf("&"));
+				}
+				
+				return val;    
+			}
+			
+			function resizeWidget(){
+				
+				var div = widget.getElement("#myFlash");
+				var size = widget.body.getDimensions();
+				
+				var h = size.innerHeight;
+				var w = size.innerWidth;
+				
+				div.style.height = h + 'px';
+				div.style.width = w + 'px';
+					
+			}
+		
+            var MyWidget = {
+
+                onLoad: function() {
+					
+					var flashURL = "http://d2fy09acxvuqxd.cloudfront.net/widgets/fish/fish.swf";
+					var widgetURL = "http://abowman.com/google-modules/fish/";
+					
+					var titlePref = "up_fishName";
+					
+					var flashVars = "";
+					
+					var prefs = widget.getPreferences();
+					
+					var useQS = widget.getValue('use_qs');
+					
+					if(useQS != "no"){
+					
+						var qs = document.location.search.substring(1);
+						qs = decodeURIComponent(qs);
+						
+						var numPrefs = prefs.length;
+						
+						for(var i=0; i < numPrefs; i++){
+							var prefName = prefs[i].name;
+							var prefValue = getPref(prefName, qs);
+							
+							if(prefValue != undefined){
+								widget.setValue(prefName, prefValue);
+							}
+						}
+						
+						widget.setValue('use_qs', "no");
+						
+					}
+					
+					var numPrefs = prefs.length;
+					
+					for(var i=0; i < numPrefs; i++){
+						var prefName = prefs[i].name;
+						var prefValue = widget.getValue(prefName);
+						
+						if(prefValue != undefined){
+							flashVars += prefName+"="+ getColorCodeByName(prefValue) +"&";
+						}
+					}
+					
+					var div1 = UWA.Element('div', {
+						 'id': 'flashContainer',
+						 'styles':{'text-align':'center'}
+					});
+					/*
+					var div2 = UWA.Element('div', {
+						 'id': 'flashContainer',
+						 'styles':{'margin-left':'auto;margin-right:auto'}
+					});
+					*/
+					var flash = new UWA.Controls.Flash({
+						id: "myFlash",
+						url: flashURL,
+						flashVars: flashVars,
+						scale: 'noscale',
+						salign: 'tl',
+						AllowScriptAccess:'always'
+					});
+					
+					//div1.setContent(div2);
+					div1.setContent(flash);
+					
+					widget.setBody(div1);
+					
+					widget.setTitle("<a href='"+ widgetURL +"'>"+ widget.getValue(titlePref) +"</a>");
+					
+					resizeWidget();
+					
+                }
+				
+            };
+			
+            widget.addEvent('onLoad', MyWidget.onLoad);
+			
+			widget.onResize = resizeWidget;
+			
+        //]]>
+        </script>
+    </head>
+    <body>
+        <p>Loading...</p>
+    </body>
+</html>
