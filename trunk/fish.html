@@ -1,0 +1,44 @@
+<html>
+<head>
+<script src="../js/swfobject.js" type="text/javascript"></script>
+<script src="../js/embedswf.js" type="text/javascript"></script>
+
+<style type="text/css">
+<!--
+body {
+height: 100%;
+width: 100%;
+margin: 0;
+}
+-->
+</style>
+
+</head>
+<body>
+<div id="gadgetSWF"></div>
+
+<script type="text/javascript">
+// <![CDATA[
+
+var swfURL = "fish.swf";
+var bgcolor = "F0F7FF";
+var flashVars = document.location.search.substring(1);
+
+embedSWF(swfURL, "gadgetSWF", {h:"100%",w:"100%",bgcolor:bgcolor, flashVars:flashVars, scale:"noscale",salign:"tl"});
+
+function resize(){
+	var viewportWidth = window.innerWidth;
+	var viewportHeight = window.innerHeight;
+	
+	var div = document.getElementById('gadgetSWF');
+	div.style.height = viewportHeight +"px";
+	div.style.width = viewportWidth +"px";
+}
+
+resize();
+window.onresize = resize;
+
+// ]]&gt;
+</script>
+</body>
+</html>
