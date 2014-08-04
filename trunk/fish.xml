@@ -273,7 +273,8 @@ function init(){
     window.onresize = resize;
     
     if(backgroundImage != ""){
-        fvars += "&backgroundImageCached="+ _IG_GetCachedUrl(backgroundImage);
+        //fvars += "&backgroundImageCached="+ _IG_GetCachedUrl(backgroundImage);
+		fvars += "&up_backgroundImage="+ backgroundImage;
     }
     
     for(var i=1;i <= 10;i++){
